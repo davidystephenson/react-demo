@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// const React = require('react')
+
+// function App () {
+//   reuturn `<div className='App'>
+//     <img src=${logo} />
+//   </div>`
+// }
+
+function Greet (props) {
+  console.log('props test:', props)
+  // { student: 'david', day: 'Monday' }
+
+  console.log('props.student test:', props.student)
+  /// 'david'
+
+  return <h1>Welcome to {props.day} !!! {props.student}</h1>
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div>
+    hello
+    <Greet student='amy' day='Monday' /> {/* Greet('amy', 'Monday) */}
+    <Greet student='david' day='Friday' /> {/* Greet('david', 'Friday') */}
+   </div>
+   
 }
 
 export default App;
